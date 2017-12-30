@@ -39,6 +39,22 @@ C/C++写的一个百度网盘工具，可以在linux终端中使用。
 ### 4. 手动安装到其他目录，例如 /usr/bin 下 
     cp ./baidupcs /usr/bin/
 
+   编译 (OpenSUSE)：
+===================================
+程序依赖于 libcurl和libssh。
+
+### 1. 安装依赖
+    sudo zypper install libcurl-devel libssh2-devel automake
+### 2. 获取源代码
+    git clone https://github.com/GangZhuo/BaiduPCS.git
+### 3. 编译源代码
+    cd BaiduPCS
+    ./configure && make
+    sudo make install #将安装到/usr/local/bin下
+### 4. 手动安装到其他目录，例如 /usr/bin 下 
+    sudo cp ./bin/pcs /usr/bin/
+
+
 编译 (Debian)：
 ===================================
 程序依赖于 libcurl。
